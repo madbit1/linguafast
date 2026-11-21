@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#0d9488">
-<meta name="description" content="LinguaFast for Android: text translation, three-speaker conversations, voice playback and optional AI translation. Official product, privacy, support and release information.">
+<meta name="description" content="LinguaFast v1.34.0 for Android: aligned original and translation cards, three-speaker conversations, live speech-to-text, one-tap AI Polish and Undo, and secure signed updates.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="LinguaFast — Language, without the distance">
 <meta property="og:description" content="Translate text, communicate in three-speaker conversations and choose your own AI provider.">
@@ -48,10 +48,10 @@
           <div class="phone-top"><div class="phone-brand"><span class="mini-logo">L</span>LinguaFast</div><span>⚙ &nbsp; ☼</span></div>
           <div class="mode-row"><span>✦ <b>Text translation</b></span><span>♧ <b>Conversation</b></span></div>
           <div class="phone-panel language-row"><span>English</span><span class="switch">⇄</span><span>Tiếng Việt</span></div>
-          <div class="phone-panel"><div class="hint">Original message</div><div class="phone-content">It's lovely to meet you. How was your day?</div><div class="phone-actions"><span>🎤 Speak</span><span>✨ Polish</span><span>Copy</span></div></div>
+          <div class="phone-panel"><div class="hint">Original message</div><div class="phone-content">It's lovely to meet you. How was your day?</div><div class="phone-actions"><span>🎤 Dictate</span><span>✨ Polish</span><span>↶ Undo</span></div></div>
           <div class="phone-primary">Translate →</div>
-          <div class="phone-panel"><div class="hint">Vietnamese · translation</div><div class="phone-content">Rất vui được gặp bạn. Hôm nay của bạn thế nào?</div><div class="phone-actions"><span>🔊 Listen</span><span>Copy</span><span>Save</span></div></div>
-          <div class="phone-footer"><span>Instant / AI modes</span><span>History · Saved</span></div>
+          <div class="phone-panel"><div class="hint">Vietnamese · translation</div><div class="phone-content">Rất vui được gặp bạn. Hôm nay của bạn thế nào?</div><div class="phone-actions"><span>🔊 Play</span><span>Copy</span><span>⭐ Save</span><span>WhatsApp</span></div></div>
+          <div class="phone-footer"><span>Instant / AI modes</span><span>↶ Undo Polish · History &amp; Saved expand</span></div>
         </div>
         <div class="float-pill">🌐 Built for <b>real conversations</b></div>
         <div class="preview-label" style="text-align:center">Interface illustration based on the current app — not a device screenshot</div>
@@ -65,7 +65,7 @@
         <article class="feature"><div class="feature-icon" aria-hidden="true">🌐</div><h3>Text translation</h3><p>Translate typed messages with automatic source-language detection when available, or choose a language yourself.</p></article>
         <article class="feature"><div class="feature-icon" aria-hidden="true">🎙</div><h3>Voice and playback</h3><p>Speak using Android’s installed speech recognizer, then listen to translated text. Speech recognition is separate from AI model selection and depends on the language and device service.</p></article>
         <article class="feature"><div class="feature-icon" aria-hidden="true">👥</div><h3>Three-speaker conversations</h3><p>Give Speaker A, Speaker B, and Guest C their own language settings, voice controls, and conversation history.</p></article>
-        <article class="feature"><div class="feature-icon" aria-hidden="true">✨</div><h3>Optional AI Polish</h3><p>Ask your selected AI provider to suggest spelling and grammar improvements before you choose whether to apply them.</p></article>
+        <article class="feature"><div class="feature-icon" aria-hidden="true">✨</div><h3>Optional AI Polish</h3><p>One tap corrects the active text draft using your chosen AI provider; Undo restores the exact previous wording locally, without another AI request. Available in Translate and typed Conversation drafts.</p></article>
         <article class="feature"><div class="feature-icon" aria-hidden="true">🔐</div><h3>Encrypted provider keys</h3><p>Keep separate API credentials for each configured AI provider in local Android Keystore-backed encrypted storage.</p></article>
         <article class="feature"><div class="feature-icon" aria-hidden="true">📚</div><h3>Saved phrases for learning</h3><p>Open full original and translated text together in History and Saved, copy both languages, or play each aloud. A dedicated learning system is still in development.</p></article>
       </div>
@@ -82,17 +82,17 @@
         <article class="feature">
           <div class="feature-icon" aria-hidden="true">📥</div>
           <h3>Updates you can follow</h3>
-          <p>Tap <strong>About → Check now → Update now</strong>. In v28, the update flow shows an immediate download window, real progress where Android provides it, checksum verification and a final system installation prompt.</p>
+          <p>The v34 updater streams the GitHub APK over HTTPS on modern Android to avoid downloads stuck on Waiting. It reports bytes received, supports cancellation and verifies the published SHA-256 twice before Android asks for installation approval. This new download method still needs an end-to-end device test.</p>
         </article>
         <article class="feature">
           <div class="feature-icon" aria-hidden="true">🗣</div>
-          <h3>Two languages together</h3>
-          <p>History and Saved entries show the entire original and translated message in one card. Use <strong>Copy both</strong> or the separate voice buttons instead of repeated sentence controls.</p>
+          <h3>Cleaner v34 layout</h3>
+          <p>Original and translated text appear in aligned, clearly outlined boxes. AI provider settings and the reusable phrases, History and Saved library expand when needed, reducing vertical scrolling without removing features.</p>
         </article>
         <article class="feature">
           <div class="feature-icon" aria-hidden="true">⚙️</div>
           <h3>Provider selection</h3>
-          <p>Switch AI providers from the translator, manage each saved profile in Settings and keep credentials in Android Keystore-backed storage when key saving is enabled.</p>
+          <p>Choose Instant or AI, open the compact AI channel selector to change providers, or manage saved profiles in Settings. Remembered keys use Android Keystore-backed encryption.</p>
         </article>
       </div>
       <p class="fine">Speech recognition is provided by Android, not Gemini or the selected AI translation model. See <a href="support.html#speech">speech-recognition troubleshooting</a> if transcription is unclear.</p>
@@ -134,7 +134,7 @@
     <div class="container showcase">
       <div>
         <div class="eyebrow">Your AI, your choice</div><h2>Switch providers. Keep your keys.</h2>
-        <p>The Android app offers a main-screen AI-provider selector and distinct editable provider profiles. Keys, models and endpoint settings are remembered separately when you choose local storage. The Settings dialog stays open after saving so you can configure another provider.</p>
+        <p>The Android app has an expandable main-screen AI-provider selector and distinct editable provider profiles. Keys, models and endpoint settings are remembered separately when you choose local storage. The Settings dialog stays open after saving so you can configure another provider.</p>
         <div class="provider-list" aria-label="Current supported provider presets">
           <span>Gemini</span><span>Groq</span><span>OpenRouter</span><span>OpenAI</span><span>DeepSeek</span><span>Custom</span>
         </div>
@@ -163,11 +163,11 @@
       <div class="section-heading"><div class="eyebrow">Version and updates</div><h2>Follow the current release.</h2><p>Our release information comes from the official public LinguaFast GitHub channel. New versions are published there separately from Google Play.</p></div>
       <div class="two-column">
         <div class="feature" style="min-height:0">
-          <div class="release-date" id="release-state">Latest confirmed public release · 21 November 2026</div>
-          <div class="version-big" id="release-version">v1.28.0</div>
-          <p id="release-copy">Latest verified GitHub release: a visible APK download progress window, with Android-reported progress, checksum verification and installation approval.</p>
+          <div class="release-date" id="release-state">Published Android release · 21 November 2026</div>
+          <div class="version-big" id="release-version">v1.34.0</div>
+          <p id="release-copy">v34 brings a more compact Translate layout, one-tap Polish with Undo and an updated Android download process. The updater still requires real-device verification.</p>
           <div class="hero-actions">
-            <a class="button button-primary" id="release-link" href="https://github.com/madbit1/linguafast-updates/releases/latest" rel="noopener">View official release ↗</a>
+            <a class="button button-primary" id="release-link" href="https://github.com/madbit1/linguafast-updates/releases/tag/android-v34" rel="noopener">View official release ↗</a>
             <a class="button button-ghost" href="https://github.com/madbit1/linguafast-updates/releases" rel="noopener">All releases</a>
           </div>
           <p class="fine">GitHub sideload releases are not the Google Play Store. If your device identifies an APK as harmful, do not bypass its security warning.</p>
