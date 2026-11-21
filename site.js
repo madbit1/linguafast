@@ -24,7 +24,8 @@
         25: "Separate AI-provider rows and a main-screen AI-channel selector.",
         26: "Better wrapping of saved original and translated text.",
         27: "Full bilingual History and Saved cards with one Copy both control.",
-        28: "Update progress pop-up, Android download percentage, checksum validation and clear installation handoff."
+        28: "Update progress pop-up, Android download percentage, checksum validation and clear installation handoff.",
+        29: "Longer voice recording pauses, improved final speech recognition, and cursor-based dictation for Translate and Conversation drafts."
       };
       description.textContent = summaries[n] ||
         "A newer signed LinguaFast APK is available. Check the official release notes for the full list of changes.";
