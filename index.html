@@ -22,7 +22,7 @@
     <nav class="site-nav" aria-label="Main navigation">
       <a href="#features">Features</a>
       <a href="#conversation">Conversation</a>
-      <a href="#learning">Learning</a>
+      <a href="#improvements">What’s new</a><a href="#learning">Learning</a>
       <a href="#ai">AI options</a>
       <a href="privacy.html">Privacy</a>
       <a href="support.html" class="nav-cta">Support &amp; help</a>
@@ -35,13 +35,13 @@
       <div>
         <div class="eyebrow">LinguaFast for Android</div>
         <h1>Language, without the distance<span style="color:var(--teal)">.</span></h1>
-        <p class="hero-lead">Translate a message, understand a conversation, and speak with more confidence. LinguaFast brings text, voice, and optional AI-powered translation together in one simple Android app. Save useful translations for later review and language practice.</p>
+        <p class="hero-lead">Translate a message, understand a conversation, and speak with more confidence. LinguaFast brings text, voice, and optional AI-powered translation together in one simple Android app. Save full original-and-translated messages in History or Saved, with clear controls to copy both and listen to either language.</p>
         <div class="hero-actions">
           <a class="button button-primary" href="#features">Explore the features <span aria-hidden="true">↗</span></a>
           <a class="button button-ghost" href="#release">Latest release</a>
         </div>
         <p class="little-note">An independent Android project developed by <strong>Stylish Future Technologies</strong>. Google Play submission is being prepared; the existing GitHub APK distribution is not a Play Store approval.</p>
-        <div class="hero-trust"><span>✓ Text and voice</span><span>✓ Three-speaker mode</span><span>✓ Your choice of AI provider</span></div>
+        <div class="hero-trust"><span>✓ Text and voice</span><span>✓ Three-speaker mode</span><span>✓ Your choice of AI provider</span><span>✓ Bilingual History &amp; Saved</span></div>
       </div>
       <div class="phone-wrap" aria-label="Illustrative preview of LinguaFast's Android text translation interface">
         <div class="phone">
@@ -63,12 +63,39 @@
       <div class="section-heading"><div class="eyebrow">What LinguaFast does</div><h2>More ways to be understood.</h2><p>Practical tools for everyday travel, friendships, work, and conversations across languages.</p></div>
       <div class="grid3">
         <article class="feature"><div class="feature-icon" aria-hidden="true">🌐</div><h3>Text translation</h3><p>Translate typed messages with automatic source-language detection when available, or choose a language yourself.</p></article>
-        <article class="feature"><div class="feature-icon" aria-hidden="true">🎙</div><h3>Voice and playback</h3><p>Speak to enter text and listen to translations read aloud using the services installed on your Android device.</p></article>
+        <article class="feature"><div class="feature-icon" aria-hidden="true">🎙</div><h3>Voice and playback</h3><p>Speak using Android’s installed speech recognizer, then listen to translated text. Speech recognition is separate from AI model selection and depends on the language and device service.</p></article>
         <article class="feature"><div class="feature-icon" aria-hidden="true">👥</div><h3>Three-speaker conversations</h3><p>Give Speaker A, Speaker B, and Guest C their own language settings, voice controls, and conversation history.</p></article>
         <article class="feature"><div class="feature-icon" aria-hidden="true">✨</div><h3>Optional AI Polish</h3><p>Ask your selected AI provider to suggest spelling and grammar improvements before you choose whether to apply them.</p></article>
         <article class="feature"><div class="feature-icon" aria-hidden="true">🔐</div><h3>Encrypted provider keys</h3><p>Keep separate API credentials for each configured AI provider in local Android Keystore-backed encrypted storage.</p></article>
-        <article class="feature"><div class="feature-icon" aria-hidden="true">📚</div><h3>Saved phrases for learning</h3><p>Save useful translations and revisit them in a separate study library, without confusing your active conversation. Learning features are under development.</p></article>
+        <article class="feature"><div class="feature-icon" aria-hidden="true">📚</div><h3>Saved phrases for learning</h3><p>Open full original and translated text together in History and Saved, copy both languages, or play each aloud. A dedicated learning system is still in development.</p></article>
       </div>
+    </div>
+  </section>
+  <section class="section" id="improvements">
+    <div class="container">
+      <div class="section-heading">
+        <div class="eyebrow">Recent app improvements</div>
+        <h2>Clearer translation. Clearer updates.</h2>
+        <p>What changed in the latest published Android builds.</p>
+      </div>
+      <div class="grid3">
+        <article class="feature">
+          <div class="feature-icon" aria-hidden="true">📥</div>
+          <h3>Updates you can follow</h3>
+          <p>Tap <strong>About → Check now → Update now</strong>. In v28, the update flow shows an immediate download window, real progress where Android provides it, checksum verification and a final system installation prompt.</p>
+        </article>
+        <article class="feature">
+          <div class="feature-icon" aria-hidden="true">🗣</div>
+          <h3>Two languages together</h3>
+          <p>History and Saved entries show the entire original and translated message in one card. Use <strong>Copy both</strong> or the separate voice buttons instead of repeated sentence controls.</p>
+        </article>
+        <article class="feature">
+          <div class="feature-icon" aria-hidden="true">⚙️</div>
+          <h3>Provider selection</h3>
+          <p>Switch AI providers from the translator, manage each saved profile in Settings and keep credentials in Android Keystore-backed storage when key saving is enabled.</p>
+        </article>
+      </div>
+      <p class="fine">Speech recognition is provided by Android, not Gemini or the selected AI translation model. See <a href="support.html#speech">speech-recognition troubleshooting</a> if transcription is unclear.</p>
     </div>
   </section>
   <section class="section alt" id="learning">
@@ -98,7 +125,7 @@
       <div>
         <div class="eyebrow">Conversation mode</div><h2>One conversation.<br>Three voices.</h2>
         <p>LinguaFast's conversation view isn't limited to two people. Each speaker can use a chosen language, with a dedicated microphone and a shared transcript.</p>
-        <p>Automatic recognition and transcription depend on the Android speech service. If a short phrase is misunderstood, select the language manually or type it instead.</p>
+        <p>Android’s speech-recognition service converts microphone audio into text before the translation provider receives it. If transcription is garbled, choose the speaker’s actual language instead of Auto, speak away from background noise, and review the recognized text. Changing Gemini or another translation model does not change the Android recognizer.</p>
         <a class="button button-ghost" href="support.html">Learn how it works</a>
       </div>
     </div>
@@ -107,7 +134,7 @@
     <div class="container showcase">
       <div>
         <div class="eyebrow">Your AI, your choice</div><h2>Switch providers. Keep your keys.</h2>
-        <p>Version 1.23 introduced independent saved profiles for every supported AI provider. Switch back without typing your previous API key again; models and endpoint settings are remembered too.</p>
+        <p>The Android app offers a main-screen AI-provider selector and distinct editable provider profiles. Keys, models and endpoint settings are remembered separately when you choose local storage. The Settings dialog stays open after saving so you can configure another provider.</p>
         <div class="provider-list" aria-label="Current supported provider presets">
           <span>Gemini</span><span>Groq</span><span>OpenRouter</span><span>OpenAI</span><span>DeepSeek</span><span>Custom</span>
         </div>
@@ -136,9 +163,9 @@
       <div class="section-heading"><div class="eyebrow">Version and updates</div><h2>Follow the current release.</h2><p>Our release information comes from the official public LinguaFast GitHub channel. New versions are published there separately from Google Play.</p></div>
       <div class="two-column">
         <div class="feature" style="min-height:0">
-          <div class="release-date" id="release-state">Latest confirmed public release · 19 November 2026</div>
-          <div class="version-big" id="release-version">v1.23.0</div>
-          <p id="release-copy">Separate locally encrypted API key profiles for Gemini, Groq, OpenRouter, OpenAI, DeepSeek and custom providers.</p>
+          <div class="release-date" id="release-state">Latest confirmed public release · 21 November 2026</div>
+          <div class="version-big" id="release-version">v1.28.0</div>
+          <p id="release-copy">Latest verified GitHub release: a visible APK download progress window, with Android-reported progress, checksum verification and installation approval.</p>
           <div class="hero-actions">
             <a class="button button-primary" id="release-link" href="https://github.com/madbit1/linguafast-updates/releases/latest" rel="noopener">View official release ↗</a>
             <a class="button button-ghost" href="https://github.com/madbit1/linguafast-updates/releases" rel="noopener">All releases</a>
